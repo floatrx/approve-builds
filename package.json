@@ -4,19 +4,32 @@
   "description": "Fix for broken pnpm approve-builds that corrupts pnpm-workspace.yaml",
   "type": "module",
   "bin": {
-    "approve-builds": "./src/index.ts"
+    "approve-builds": "bin/approve-builds.mjs"
   },
+  "files": [
+    "src",
+    "bin"
+  ],
   "scripts": {
     "start": "tsx src/index.ts"
   },
-  "keywords": ["pnpm", "approve-builds", "onlyBuiltDependencies", "build-scripts"],
+  "keywords": [
+    "pnpm",
+    "approve-builds",
+    "onlyBuiltDependencies",
+    "build-scripts"
+  ],
   "author": "floatrx",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/floatrx/approve-builds.git"
+  },
   "dependencies": {
-    "@inquirer/prompts": "^7"
+    "@inquirer/prompts": "^7",
+    "tsx": "^4"
   },
   "devDependencies": {
-    "tsx": "^4",
     "typescript": "^5"
   }
 }
