@@ -36,16 +36,22 @@ This tool writes approvals correctly to `package.json` instead:
 
 ## Install
 
+### Prerequisites
+
+Ensure `PNPM_HOME` is configured (required for global packages):
+
 ```bash
-pnpm add -g approve-builds
+pnpm setup
+source ~/.zshrc  # or restart terminal
 ```
 
-Or clone and link:
+### From source
 
 ```bash
 git clone https://github.com/floatrx/approve-builds.git
 cd approve-builds
-pnpm install && pnpm link -g
+pnpm install
+pnpm link -g
 ```
 
 ## Usage
